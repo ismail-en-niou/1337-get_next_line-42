@@ -1,12 +1,28 @@
-#include <stdio.h>
 #include "get_next_line.h"
-int main()
+
+int main(void)
 {
-    char *line ;
+    int fd;
+    char *line;
 
-    int fd = open("test.txt",O_RDWR | O_CREAT , 0777);
+    // Open a file for reading
+    fd = open("only_nl.txt", O_RDONLY);
+    if (fd == -1)
+    {
+        perror("Error opening file");
+        return (1);
+    }
 
-    line = get_next_line(fd);
-    printf("%s",line);
+    // Read the file line by line
+    while ((line = get_next_line(fd)) != NULL)
+    {
+        // Print the line to the console
+        printf("%s", line);
+        free(line);  // Don't forget to free the line after printing
+    }
+
+    // Close the file
     close(fd);
+
+    return (0);
 }

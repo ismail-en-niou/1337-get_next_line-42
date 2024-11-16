@@ -1,3 +1,17 @@
-AAAAAAAAAx
-Kstgx
-Kytg
+total 64
+drwxr-xr-x  10 ien-niou  candidates    340 Nov 16 13:05 .
+drwxr-xr-x  11 ien-niou  candidates    374 Nov 14 14:03 ..
+
+
+
+
+
+
+drwxr-xr-x  12 ien-niou  candidates    408 Nov 15 16:42 .git
+drwxr-xr-x   3 ien-niou  candidates    102 Nov 14 13:55 .vscode
+-rwxr-xr-x   1 ien-niou  candidates  13488 Nov 16 13:05 a.out
+-rw-r--r--   1 ien-niou  candidates   1287 Nov 16 13:04 get_next_line.c
+-rw-r--r--   1 ien-niou  candidates   1594 Nov 16 12:45 get_next_line.h
+-rw-r--r--   1 ien-niou  candidates   2334 Nov 16 12:45 get_next_line_utils.c
+-rw-r--r--   1 ien-niou  candidates    499 Nov 16 13:05 main.c
+-rwxr-xr-x   1 ien-niou  candidates      0 Nov 16 13:06 test.txt
