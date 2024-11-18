@@ -6,7 +6,7 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:28:05 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/11/16 16:53:22 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:10:02 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char	*ft_strjoin(char *s1, char *s2)
 
 char	*ft_strchr(const char *s, int c)
 {
+	if (!s)
+		return (NULL);
 	while (*s != '\0')
 	{
 		if (*s == (char)c)
