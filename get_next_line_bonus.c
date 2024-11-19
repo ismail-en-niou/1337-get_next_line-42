@@ -6,7 +6,7 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 16:29:52 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/11/16 16:49:41 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/11/19 09:44:39 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,18 @@ static char	*extract_line(char **storage)
 
 static int	read_to_storage(int fd, char **storage)
 {
-	char	buffer[BUFFER_SIZE + 1];
+	char	*buffer;
 	char	*temp;
 	ssize_t	bytes_read;
 
+	buffer = (char *)malloc(BUFFER_SIZE + 1);
+	if (!buffer)
+	{
+		free(*storage);
+		*storage = NULL;
+		free(buffer);
+		return (-1);
+	}
 	bytes_read = read(fd, buffer, BUFFER_SIZE);
 	while (bytes_read > 0)
 	{
@@ -52,6 +60,7 @@ static int	read_to_storage(int fd, char **storage)
 			break ;
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
 	}
+	free(buffer);
 	return (bytes_read);
 }
 
