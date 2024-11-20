@@ -6,16 +6,13 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 18:45:36 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/11/16 17:11:01 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/11/20 13:17:37 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# include <fcntl.h>
-# include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 
 char	*get_next_line(int fd);
