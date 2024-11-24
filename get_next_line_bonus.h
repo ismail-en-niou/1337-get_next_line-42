@@ -19,11 +19,6 @@ char	*get_next_line(int fd);
 char	*ft_strdup(char *s);
 char	*ft_strjoin(char *s1, char *s2);
 char	*ft_substr(char *s, unsigned int start, size_t len);
-int		ft_test_new(char *str);
-char	*ft_strjoin_and_free(char *s1, char *s2);
-char	*return_on_eof(char **line, char **buffer, char **xayata);
-char	*process_buffer(char *line, char *buffer, int read_byte, char **xayata);
-char	*handle_error(char **line, char **buffer, int flag);
 char	*ft_strchr(const char *s, int c);
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
